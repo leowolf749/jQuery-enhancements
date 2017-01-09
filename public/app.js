@@ -1,22 +1,24 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 window.addEventListener('load', function() {
-    let nav_list = document.querySelector('#show-list');
-    let nav_add = document.querySelector('#show-add');
+    // let nav_list = document.querySelector('#show-list');
+    // let nav_add = document.querySelector('#show-add');
 
-    let list_view = document.querySelector('#show-food');
-    let add_view = document.querySelector('#add-food');
+    // let list_view = document.querySelector('#show-food');
+    // let add_view = document.querySelector('#add-food');
 
     let search = document.querySelector('#search');
 
-    nav_list.addEventListener('click', function () {
-        list_view.classList.remove('hidden');
-        add_view.classList.add('hidden');
-    });
+    $('#tabs').tabs();
 
-    nav_add.addEventListener('click', function () {
-        list_view.classList.add('hidden');
-        add_view.classList.remove('hidden');
-    });
+    // nav_list.addEventListener('click', function () {
+    //     list_view.classList.remove('hidden');
+    //     add_view.classList.add('hidden');
+    // });
+
+    // nav_add.addEventListener('click', function () {
+    //     list_view.classList.add('hidden');
+    //     add_view.classList.remove('hidden');
+    // });
 
     search.addEventListener('keyup', function () {
         let keepers = [];

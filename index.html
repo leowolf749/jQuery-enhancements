@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>contacts app</title>
+    <title>jQuery ENHANCE</title>
     <!-- add css file -->
     <link rel="stylesheet" href="style.css">
     <!-- add js file -->
@@ -16,26 +16,39 @@
         <p>{{ price }}</p>
     </script>
 
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+
 </head>
     
-<body>
-    <h1>MENU</h1>
-    <nav>
-        <h2><a id="show-list" href="#">Food Items</a></h2>
-        <h2><a id="show-add" href="#">Add A Food Item</a></h2>
-    </nav>
+<body id="tabs">
+    <header>
+        <h1>MENU</h1>
+        <nav>
+            <ul>
+                <li><h2><a href="#show-food">Food Items</a></h2></li>
+                <li><h2><a href="#add-food">Add A Food Item</a></h2></li>
+            </ul>
+        </nav>
+    </header>
 
-    
-    <div id="show-food">
-        <input type="text" id="search" placeholder="search menu">
-        <ul></ul>
-    </div>
+    <main>
+        <div id="show-food">
+            <input type="text" id="search" placeholder="search menu">
+            <ul></ul>
+        </div>
 
-    <div class="hidden" id="add-food">
-        <input type="text" id="add-food-item" placeholder="food item">
-        <button id="submit">add</button>
-    </div>
-    
+        <div class="hidden" id="add-food">
+            <input type="text" id="add-food-item" placeholder="food item">
+            <button id="submit">add</button>
+        </div>
+    </main>
 </body>
 
 </html>

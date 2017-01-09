@@ -1273,7 +1273,7 @@ h1 {
 
 /* Nav bar with links to different displays */
 nav {
-  width: 41.66667%;
+  width: 50%;
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
@@ -1292,6 +1292,8 @@ nav {
     content: ' '; }
   nav::after {
     clear: both; }
+  nav li {
+    list-style-type: none; }
   nav h2 {
     width: 50%;
     float: left;

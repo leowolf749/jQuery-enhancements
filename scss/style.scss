@@ -20,9 +20,13 @@ h1 {
 
 /* Nav bar with links to different displays */
 nav {
-    @include grid-column(5);
+    @include grid-column(6);
     @include grid-row();
     background-color: floralwhite;
+
+    li {
+        list-style-type: none;
+    }
 
     h2 {
         @include grid-column(6);
