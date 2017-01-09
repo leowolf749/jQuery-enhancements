@@ -20,7 +20,7 @@ h1 {
 
 /* Nav bar with links to different displays */
 nav {
-    @include grid-column(6);
+    @include grid-column(12);
     @include grid-row();
     background-color: floralwhite;
 
@@ -29,7 +29,9 @@ nav {
     }
 
     h2 {
-        @include grid-column(6);
+        @include grid-column(4);
+        text-align: center;
+        padding: 0px;
     }
 
     a {
@@ -53,11 +55,8 @@ div {
     overflow-y: scroll;
 }
 
-#show-food {
-    // display: none;
-}
 
-#show-food ul {
+#show-food ul, #show-veg ul {
     text-align: center;
     list-style-type: none;
     margin-top: 50px;
@@ -71,11 +70,12 @@ div {
     .descrip {
         font-size: .7em;
     }
+
+    .categories {
+        font-size: .8em;
+    }
 }
 
-.hidden {
-     display: none;
-}
 
 /* Add food item */
 #submit {
@@ -84,6 +84,9 @@ div {
     padding: 5px;
     border-radius: 5px;
     font-size: .8em;
+    display: block;
+    margin: 0px auto;
+    margin-top: 20px;
 }
 
 input {

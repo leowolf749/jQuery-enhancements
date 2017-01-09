@@ -1,23 +1,10 @@
-window.addEventListener('load', function() {
-    // let nav_list = document.querySelector('#show-list');
-    // let nav_add = document.querySelector('#show-add');
+let foodList = require('./foods');
 
-    // let list_view = document.querySelector('#show-food');
-    // let add_view = document.querySelector('#add-food');
+window.addEventListener('load', function() {
 
     let search = document.querySelector('#search');
 
     $('#tabs').tabs();
-
-    // nav_list.addEventListener('click', function () {
-    //     list_view.classList.remove('hidden');
-    //     add_view.classList.add('hidden');
-    // });
-
-    // nav_add.addEventListener('click', function () {
-    //     list_view.classList.add('hidden');
-    //     add_view.classList.remove('hidden');
-    // });
 
     search.addEventListener('keyup', function () {
         let keepers = [];
@@ -32,13 +19,19 @@ window.addEventListener('load', function() {
         showFood(keepers);
     });
 
-    showFood(foodList);
+    showFood(foodList, '#show-food ul');
+    showFood(foodList.filter(function (item) {
+        if (item.categories.includes("Vegetarian")) {
+            return true;
+        } else {
+            return false;
+        }
+    }), '#show-veg ul');
 });
 
-let foodList = require('./foods');
 
-function showFood(food) {
-    let parent = document.querySelector('#show-food ul');
+function showFood(food, selector) {
+    let parent = document.querySelector(selector);
     parent.innerHTML = '';
 
         for (let i = 0; i < food.length; i++) {
@@ -56,7 +49,7 @@ function showFood(food) {
 
 /* this doesn't work yet */
 function addFood(food) {
-    let input = document.querySelector('#add-food-item');
+    let input = document.querySelector('#add-food-name');
     
     let addButton = document.querySelector('#submit');
     addButton.addEventListener('click', function() {

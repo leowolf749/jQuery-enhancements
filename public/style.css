@@ -1273,7 +1273,7 @@ h1 {
 
 /* Nav bar with links to different displays */
 nav {
-  width: 50%;
+  width: 100%;
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
@@ -1295,10 +1295,12 @@ nav {
   nav li {
     list-style-type: none; }
   nav h2 {
-    width: 50%;
+    width: 33.33333%;
     float: left;
     padding-right: 0.625rem;
-    padding-left: 0.625rem; }
+    padding-left: 0.625rem;
+    text-align: center;
+    padding: 0px; }
     @media print, screen and (min-width: 40em) {
       nav h2 {
         padding-right: 0.9375rem;
@@ -1329,19 +1331,18 @@ div {
   div:last-child:not(:first-child) {
     float: right; }
 
-#show-food ul {
+#show-food ul, #show-veg ul {
   text-align: center;
   list-style-type: none;
   margin-top: 50px;
   color: indianred;
   padding: 0px; }
-  #show-food ul li {
+  #show-food ul li, #show-veg ul li {
     border-bottom: 1px dotted black; }
-  #show-food ul .descrip {
+  #show-food ul .descrip, #show-veg ul .descrip {
     font-size: .7em; }
-
-.hidden {
-  display: none; }
+  #show-food ul .categories, #show-veg ul .categories {
+    font-size: .8em; }
 
 /* Add food item */
 #submit {
@@ -1349,7 +1350,10 @@ div {
   color: white;
   padding: 5px;
   border-radius: 5px;
-  font-size: .8em; }
+  font-size: .8em;
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px; }
 
 input {
   border-radius: 5px;
