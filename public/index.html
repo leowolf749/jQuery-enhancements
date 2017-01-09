@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>contacts app</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="app.js"></script>
+
+    <script id="food-template" type="x-mustache-template">
+        <p>{{ foodName }}</p>
+        <p class="descrip">{{ description }}</p>
+        <p>{{ price }}</p>
+    </script>
+
+</head>
+    
+<body>
+    <h1>MENU</h1>
+    <nav>
+        <h2><a id="show-list" href="#">Food Items</a></h2>
+        <h2><a id="show-add" href="#">Add A Food Item</a></h2>
+    </nav>
+
+    
+    <div id="show-food">
+        <input type="text" id="search" placeholder="search menu">
+        <ul></ul>
+    </div>
+
+    <div class="hidden" id="add-food">
+        <input type="text" id="add-food-item" placeholder="food item">
+        <button id="submit">add</button>
+    </div>
+    
+</body>
+
+</html>

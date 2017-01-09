@@ -1,1 +1,1 @@
-# jQuery-enhancements
+# contacts-app
